@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  doc-resizer-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: doc-resizer:latest
+    container_name: doc-resizer-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped
